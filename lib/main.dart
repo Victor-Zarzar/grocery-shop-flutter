@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_shop_flutter/pages/home_page.dart';
+import 'package:grocery_shop_flutter/pages/intro_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Grocery Shop App',
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const IntroPage(),
     );
   }
 }
