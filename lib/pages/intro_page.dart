@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shop_flutter/components/app_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery_shop_flutter/pages/home_page.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -17,20 +20,31 @@ class _IntroPageState extends State<IntroPage> {
           padding: const EdgeInsets.only(left: 80.0, right: 80, bottom: 40, top: 160),
           child: Image.asset('lib/assets/images/avocado.png'),
         ),
-        Padding(
+         Padding(
           padding: const EdgeInsets.all(24.0),
-          child: Text('We deliver groceries at your doorstep', textAlign: TextAlign.center, style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          child: Text('We deliver groceries at your doorstep', textAlign: TextAlign.center, style: GoogleFonts.notoSerif(fontSize: 36, fontWeight: FontWeight.bold),
           ),
         ),
-        Text('Fresh items everyday'),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.deepPurple,
-            borderRadius: BorderRadius.circular(12),
+        const SizedBox(height: 10),
+        Text('Fresh items everyday', style: TextStyle(fontSize: 18, color: TextColor.secondaryColor),),
+        const Spacer(),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+            context,
+            MaterialPageRoute(
+            builder: (context) => const HomePage()));
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              color: ButtonColor.primaryColor,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            padding: const EdgeInsets.all(24),
+            child: Text('Get Started', style: TextStyle(color: TextColor.primaryColor),),
           ),
-          padding: EdgeInsets.all(24),
-          child: Text('Get Started', style: TextStyle(color: Colors.white),),
-        )
+        ),
+        const Spacer(),
       ],
      ),
     );
