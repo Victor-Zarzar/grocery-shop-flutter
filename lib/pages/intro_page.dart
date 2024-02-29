@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_shop_flutter/components/app_theme.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery_shop_flutter/components/assets_app.dart';
 import 'package:grocery_shop_flutter/pages/home_page.dart';
 
 class IntroPage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _IntroPageState extends State<IntroPage> {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 80.0, right: 80, bottom: 40, top: 160),
-          child: Image.asset('lib/assets/images/avocado.png'),
+          child: ImageIntro.asset(),
         ),
          Padding(
           padding: const EdgeInsets.all(24.0),

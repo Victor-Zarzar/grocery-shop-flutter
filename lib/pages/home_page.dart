@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: SafeArea(child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(height: 48),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            child: Text("Good morning,"),
+          ),
+          Text("Let's order fresh items for you")
+        ],
+      )),
+    );
   }
 }
