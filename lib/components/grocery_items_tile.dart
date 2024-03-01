@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shop_flutter/components/app_theme.dart';
 
 class GroceryItemTile extends StatelessWidget {
   final String itemName;
@@ -8,25 +9,43 @@ class GroceryItemTile extends StatelessWidget {
 
   const GroceryItemTile({super.key, required this.itemName, required this.itemPrice, required this.imagePath, required this.colorListCard});
 
-  @override
+    @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: colorListCard,
-      borderRadius: BorderRadius.circular(12)
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
+    return Padding(
+      padding: const EdgeInsets.all(12),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: colorListCard,
+        ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(imagePath, height: 64,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: Image.asset(
+                imagePath,
+                height: 64,
+              ),
             ),
-            Text(itemName),
-
-            MaterialButton(onPressed: () {},
-            color: colorListCard,
-            child: Text('\$$itemPrice', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            Text(
+              itemName,
+              style: const TextStyle(
+                fontSize: 16,
+              ),
             ),
-            )
+            MaterialButton(
+              onPressed: () {},
+              color: colorListCard,
+              child: Text(
+                '\$$itemPrice',
+                style: TextStyle(
+                  color: CardList.primaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ],
         ),
       ),

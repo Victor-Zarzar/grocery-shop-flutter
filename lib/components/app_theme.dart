@@ -38,3 +38,9 @@ class ItemsColors {
 
   static Color get fourthColor => const Color(0xFF2196F3);
 }
+
+class CardList {
+  CardList._();
+
+  static Color get primaryColor => const Color(0xFFFFFFFF);
+}
