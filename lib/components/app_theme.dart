@@ -34,7 +34,7 @@ class ItemsColors {
 
   static Color get secondaryColor => const Color(0xFFFFFFF00);
 
-  static Color get thirdColor => const Color(0xFF79548);
+  static Color get thirdColor => const Color(0xFF795548);
 
   static Color get fourthColor => const Color(0xFF2196F3);
 }
