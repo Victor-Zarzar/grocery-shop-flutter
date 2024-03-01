@@ -44,3 +44,9 @@ class CardList {
 
   static Color get primaryColor => const Color(0xFFFFFFFF);
 }
+
+class IconBag {
+  IconBag._();
+  
+  static Color get primaryColor => const Color(0xFF000000);
+}

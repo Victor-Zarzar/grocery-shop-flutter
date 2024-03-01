@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery_shop_flutter/components/app_theme.dart';
 import 'package:grocery_shop_flutter/components/grocery_items_tile.dart';
 import 'package:grocery_shop_flutter/model/cart_model.dart';
+import 'package:grocery_shop_flutter/pages/cart_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,10 +17,10 @@ class HomePage extends StatelessWidget {
        Navigator.push(
         context,
         MaterialPageRoute(
-        builder: (context) => const HomePage()));
+        builder: (context) => const CartPage()));
       },
-      backgroundColor: Colors.black,
-      child: Icon(Icons.shopping_bag),
+      backgroundColor: IconBag.primaryColor,
+      child: const Icon(Icons.shopping_bag),
       ),
       body: SafeArea(child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,6 +62,10 @@ class HomePage extends StatelessWidget {
                 itemPrice: value.shopItems[index][1],
                 imagePath: value.shopItems[index][2],
                 colorListCard: value.shopItems[index][3],
+                onPressed: () {
+                  Provider.of<CartModel>(context, listen: false)
+                  .addItemToCart(index);
+                },
                 );
               },);
             }
