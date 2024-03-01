@@ -26,3 +26,15 @@ class ButtonColor {
 
   static Color get primaryColor => const Color(0xFF673AB7);
 }
+
+class ItemsColors {
+  ItemsColors._();
+
+  static Color get primaryColor => const Color(0xFFB2FF59);
+
+  static Color get secondaryColor => const Color(0xFFFFFFF00);
+
+  static Color get thirdColor => const Color(0xFF79548);
+
+  static Color get fourthColor => const Color(0xFF2196F3);
+}
