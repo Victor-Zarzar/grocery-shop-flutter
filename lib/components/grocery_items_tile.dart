@@ -5,16 +5,17 @@ class GroceryItemTile extends StatelessWidget {
   final String itemName;
   final String itemPrice;
   final String imagePath;
-  final colorListCard;
-  void Function()? onPressed;
+  final Color colorListCard;
+  final void Function()? onPressed; 
 
-  GroceryItemTile(
-      {super.key,
-      required this.itemName,
-      required this.itemPrice,
-      required this.imagePath,
-      required this.colorListCard,
-      required this.onPressed});
+  const GroceryItemTile({
+    super.key,
+    required this.itemName,
+    required this.itemPrice,
+    required this.imagePath,
+    required this.colorListCard,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {

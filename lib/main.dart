@@ -13,17 +13,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-   return ChangeNotifierProvider(
-    create: (context) => CartModel(),
-    child: MaterialApp(
-      title: 'Grocery Shop App',
-      theme: ThemeData(
-      useMaterial3: false),
-      debugShowCheckedModeBanner: false,
-      home: const IntroPage(),
-    ),
-   );
-
-}
-
+    return ChangeNotifierProvider(
+      create: (context) => CartModel(),
+      child: MaterialApp(
+        title: 'Grocery Shop App',
+        theme: ThemeData(useMaterial3: false),
+        debugShowCheckedModeBanner: false,
+        home: const IntroPage(),
+      ),
+    );
+  }
 }
