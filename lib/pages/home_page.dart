@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_shop_flutter/components/grocery_items_tile.dart';
+import 'package:grocery_shop_flutter/model/cart_model.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,9 +36,18 @@ class HomePage extends StatelessWidget {
             child: Text("Fresh items", style: TextStyle(fontSize: 16),
             ),
           ),
-          Expanded(child: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context, index) {
-            return GroceryItemTile();
-          },),)
+          Expanded(
+            child: Consumer<CartModel>(builder: (context, value, child) {
+              return GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context, index) {
+                return GroceryItemTile(itemName: value.shopItems[index][0],
+                itemPrice: value.shopItems[index][1],
+                imagePath: value.shopItems[index][2],
+                color: value.shopItems[index][3],
+                );
+              },);
+            }
+            ),
+          ),
         ],
       )),
     );
