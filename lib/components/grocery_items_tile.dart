@@ -8,14 +8,15 @@ class GroceryItemTile extends StatelessWidget {
   final colorListCard;
   void Function()? onPressed;
 
-  GroceryItemTile({super.key, 
-  required this.itemName, 
-  required this.itemPrice, 
-  required this.imagePath, 
-  required this.colorListCard, 
-  required this.onPressed});
+  GroceryItemTile(
+      {super.key,
+      required this.itemName,
+      required this.itemPrice,
+      required this.imagePath,
+      required this.colorListCard,
+      required this.onPressed});
 
-    @override
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(12),
