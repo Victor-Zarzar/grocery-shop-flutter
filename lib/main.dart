@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     create: (context) => CartModel(),
     child: MaterialApp(
       title: 'Grocery Shop App',
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(
+      useMaterial3: false),
       debugShowCheckedModeBanner: false,
       home: const IntroPage(),
     ),
