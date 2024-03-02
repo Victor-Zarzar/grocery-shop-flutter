@@ -5,6 +5,8 @@ class AppTheme {
   AppTheme._();
 
   static Color get primaryColor => const Color(0xFFFFFFFF);
+
+  static Color get secondaryColor => const Color(0x00000000);
 }
 
 class BackGround {
@@ -19,6 +21,8 @@ class TextColor {
   static Color get primaryColor => const Color(0xFFFFFFFF);
 
   static Color get secondaryColor => const Color(0xFF9E9E9E);
+
+  static Color get thirdColor => const Color(0xFFC8E6C9);
 }
 
 class ButtonColor {
@@ -49,4 +53,30 @@ class IconBag {
   IconBag._();
   
   static Color get primaryColor => const Color(0xFF000000);
+}
+
+class IconColor {
+  IconColor._();
+
+  static Color get primaryColor => const Color(0xFF000000);
+
+  static Color get secondaryColor => const Color(0xFFFFFFFF);
+}
+
+class ListItems {
+  ListItems._();
+
+  static Color get primaryColor => const Color(0xFFEEEEEE);
+}
+
+class CartPrice {
+  CartPrice._();
+
+  static Color get primaryColor => const Color(0xFF66BB6A);
+}
+
+class BorderCartPrice {
+  BorderCartPrice._();
+
+  static Color get primaryColor => const Color(0xFFC8E6C9);
 }
