@@ -1,16 +1,16 @@
-# grocery_shop_flutter
+# Grocery Minimalist App Flutter 
 
-A new Flutter project.
+## Stack:
 
-## Getting Started
+- Dart
+- Flutter
+- Providers
+- Google Fonts
 
-This project is a starting point for a Flutter application.
+### Version iOS:
 
-A few resources to get you started if this is your first Flutter project:
+<img src="lib/assets/images/intropageios.png" alt="intro page" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/images/homeios.png" alt="home ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/images/cartios.png" alt="cartios" width="250">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Version Android:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="lib/assets/homeandroid.png" alt="home android" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/homeandroid2.png" alt="home android 2" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/detailandroid.png" alt="detail android" width="250">
